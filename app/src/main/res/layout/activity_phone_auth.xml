@@ -1,0 +1,81 @@
+<!-- activity_phone_auth.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuthActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/baseline_phone_android_24"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="10dp"
+            android:textSize="20sp"
+            android:text="Login With Phone"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/linearLayout"
+        android:drawableStart="@drawable/phone_call"
+        android:paddingStart="16dp"
+        android:background="@drawable/custom_edit_text_rounded"
+        android:hint="Enter Phone Number"/>
+
+    <EditText
+        android:id="@+id/edtVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:drawableStart="@drawable/password"
+        android:paddingStart="16dp"
+        android:background="@drawable/custom_edit_text_rounded"
+        android:layout_below="@id/edtPhoneNumber"
+        android:hint="Enter Verification Code"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSendCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/edtVerificationCode"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/rounded_button_background"
+        android:text="Send Verification Code"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSendCode"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#0A7E0F"
+        android:background="@drawable/rounded_button_background"
+        android:text="Verify Code"/>
+
+</RelativeLayout>
